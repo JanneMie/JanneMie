@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <script>
+    'use strict';
+
+    let number1 = prompt("Anna tekemäsi päivätunnit?", "");
+    let number2 = prompt("Anna tekemäsi yötunnit?", "");
+    
+    let numberx = Number(number1);
+    let numbery = Number(number2);    
+
+    let number3 = numberx + numbery;
+    let paiva = Number(15);
+    let yo = Number(30);
+    let palkka1 = number1 * paiva;
+    let palkka2 = number2 * yo;
+    let palkka3 = palkka1 + palkka2;
+    
+    alert("Tekemäsi työtunnit yhteensä" + " " + number3 + " " + "joista yötöitä" + " " + number2);
+    alert("Palkkasi on yhteensä" + " " + palkka3);
+  </script>
+
+</body>
+</html>

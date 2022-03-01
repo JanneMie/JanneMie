@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Soveltava harjoitustyö</title>
+    <style>
+        body {
+          background-color: rgb(172, 170, 170);
+        }
+        </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <img src="logo.jpg" alt="">
+
+    <h1 class="mb-4">Opiskelijakorttihakemus</h1>
+
+    <h2 class="mb-4">Täytä kentät ja lisää kuva</h2>
+
+    <form method="POST" action="/hakemus" enctype="multipart/form-data">   <!-- POST on se metodi jolla tavaraa lähetetään, lisää kuva se toiminto jolla kuva lisätään, multipart on tiedostojen siirtämistä varten! -->
+
+        <div class="form-group">
+            <label for="otsikko">Henkilötunnus:</label>
+            <input class="form-control" type="text" name="hetu" id="hetu">
+            <label for="otsikko">Opiskelijanumero:</label>
+            <input class="form-control" type="text" name="numero" id="numero">
+            <label for="otsikko">Oppilaitos:</label>
+            <input class="form-control" type="text" name="oppi" id="oppi">
+            <label for="otsikko">Kotikunta:</label>
+            <input class="form-control" type="text" name="kunta" id="kunta">
+            <label for="otsikko">Kansalaisuus:</label>
+            <input class="form-control" type="text" name="kansa" id="kansa">
+            <label for="tiedosto">Kuvatiedosto:</label>
+            <input class="form-control-file" type="file" name="tiedosto" id="tiedosto">   <!--===== Napin kieleen ja näköön ei voi itse vaikuttaa, tällä lähetetään tiedostoja! =====-->
+        </div>
+
+        <input type="submit" class="btn btn-primary" name="laheta" value="Lähetä hakemus"> 
+        <a href="/" class="btn btn-secondary">Peruuta</a>
+
+    </form>    
+
+
+    
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8"/>
+<script>
+</script>
+</head>
+
+<body>
+Salattava: <input id="Salattava"/><br/>
+Avain: <input id="Avain"/><br/>
+<button type="button" onclick="salaKirjoita();">Salakirjoita</button>
+<p id="laatikko"></p>
+
+<script>
+	
+	function salaKirjoita(){  
+			let Salattava = document.getElementById("Salattava").value;
+			let Avain = document.getElementById("Avain").value;
+			Avain = Number(Avain); //Numeerinen arvo stringin sijaan
+			
+			let merkki = "";
+			let salattu = "";
+			let merkkiKoodi = "";
+			let salattavanPituus = Salattava.length;
+			
+			for(let i = 0;i < salattavanPituus;i++) { //Käydään läpi eri kirjaimet
+			    merkkiKoodi = Salattava.charCodeAt(i);
+				merkkiKoodi = merkkiKoodi + Avain;
+				salattu += String.fromCharCode(merkkiKoodi);
+			
+			}
+			console.log(salattu);
+			console.log(Salattava);
+		}
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+</head>
+<body>
+<center>
+ <img id="laatikko" src="Koala.jpg"/>
+
+<br/><br/>
+<a href="javascript:edellinen()"><img src="prev.jpg" alt="edellinen"</a>
+<a href="javascript:seuraava()"><img src="next.jpg" alt="seuraava"</a>
+<script type="text/javascript">
+	/*Ohjelma käy arrayta läpi yksi alkio kerrallaan*/
+				var myImage = document.getElementById("laatikko");
+				var kuvat = [];	
+				
+				kuvat[0] = "Desert.jpg";
+				
+				kuvat[1] = "Hydrangeas.jpg";
+				
+				kuvat[2] = "Jellyfish.jpg";
+				
+				kuvat[3] = "Koala.jpg";
+				
+				kuvat[4] = "Lighthouse.jpg";
+				
+				kuvat[5] = "Penguins.jpg";
+				
+				kuvat[6] = "Tulips.jpg";
+				
+   
+	
+	
+	var i = 0;
+     function seuraava()
+	{
+		i++;	//kasvatetaan indeksiä
+		if(i == 7) { //Jos viimeinen solu jo näytetty, niin näytetään eka 
+			i = 0;
+		}
+			document.getElementById("laatikko").src = kuvat[i];		//Käytin sourcea täällä
+	}
+
+	function edellinen()
+	{
+		i--;	//pienennetään indeksiä;
+		if(i == -1) { //Jos ensimmäinen solu jo näytetty, niin näytetään viimeinen 
+			i = 6;
+		}
+			document.getElementById("laatikko").src =  kuvat[i];	
+			
+		
+	}
+
+</script>
+
+</body>
+</html>

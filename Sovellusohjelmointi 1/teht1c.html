@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Lintulista</title>
+	 <link rel="stylesheet" href="teht1c.css" />
+  </head>
+  <style>
+   body {
+
+  font-family: 'Oswald', 'Futura', sans-serif;
+  margin: 0; 
+  padding: 0;}
+
+#content {
+  background-color: #009933;
+  margin: 0 auto 0 auto;
+  position: relative;
+  text-align: center;
+  max-width: 480px;
+ }
+
+div {
+    width: 450px;
+    height: 400px;
+    background-color: #ccc;
+    overflow: auto;
+}
+
+span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #777;
+    margin: 0 30px 30px 0;
+}
+
+  tr:nth-of-type(odd) {
+      background-color:#ccc;
+}
+h2 {
+  color: #fff;
+  font-size: 32px;
+   padding-top: 20px;
+ 
+}
+
+table {
+border-collapse: collapse;
+}
+
+table, ul, th, td {
+  border:1px solid black;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffa5;
+  margin: 0 auto 0 auto;
+  position: relative;
+  text-align: center;
+  max-width: 480px;
+   letter-spacing: .05em;
+    height: 20px;
+  padding-left: 1em;
+   padding-right: 1em;
+  padding-top: 10px;
+  }
+
+li {
+  background-color: #ffffa5;
+  color: #20f;
+  border-top: 1px solid #fe9772;
+  border-bottom: 1px solid #9f593f;
+  font-size: 24px;
+  letter-spacing: .05em;
+  list-style-type: none;
+  font-weight: bold;
+  text-align: left;
+  height: 50px;
+  padding-left: 1em;
+  padding-top: 10px;
+  } 
+  
+.kehystetty {
+			border: 2px solid;
+		}
+  </style>
+  <body>   <br/>   <br/>
+  
+ 
+    <div id="content">
+  
+      <h2>Lintujen havaintolista</h2>
+	    <input  id="inputti" placeholder="Kirjoita..." />
+	   <button  id="lisaa_nappi">Lisää</button>
+	<br/><br/>
+      <table id="lista" class="kehystetty">
+	   <tr>
+	   
+    <th>Lintu</th>
+    <th>Päivä</th>
+  </tr>
+  
+       </ul>
+	  <br/>
+	   
+	   <br/><br/>
+    </div>
+
+   <script src="teht1c.js"></script> 
+  </body>
+</html>

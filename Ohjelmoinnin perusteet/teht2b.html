@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+
+
+  <script>
+    'use strict';
+      let value = prompt("Kuinka monta tuotetta haluat tilata)", "");
+
+      let euro = value * 15;
+      let alennus1 = euro * 0.1;
+      let alennus2 = euro * 0.2;
+
+let message = (value == 0) ? "No ei sitten!" :
+
+  (euro < 100) ? ("Et saa alennusta!") :
+  (euro > 500) ? ("Saat alennusta 20%!", alennus2) :
+  ('Saat alennusta 10%!', alennus1);
+
+alert("Saamasi alennuksen m‰‰r‰ on" + " " + message + " " + "euroa.");
+
+
+  </script>
+
+
+</body>
+
+</html>

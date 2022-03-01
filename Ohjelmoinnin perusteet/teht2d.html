@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+
+
+  <script>
+    'use strict';
+      let value = prompt("Mist‰ tankista siirret‰‰n 1-3", "");
+      let value1 = prompt("Mihin tankkiin siirret‰‰n 1-3", "");
+      let value2 = prompt("Kuinka paljon siirret‰‰n tonneina 0-1000", "");
+
+let a;
+let b;
+let c;
+
+let value3 = Number(value2);
+
+      let tankkia = 1000;
+      let tankkib = 1000;
+      let tankkic = 1000;
+
+if(value == 1 && value1 == 2 && value2 <= 1000) { 
+				alert("Tankissa a on" + " " + (tankkia - value3) + " " + "polttoainetta tankissa b on" + " " + (tankkib + value3) + " " + "polttoainetta ja tankissa c on" + " " + (tankkic) + " " + "polttoainetta");
+			}
+			else if(value == 1 && value1 == 3 && value2 <= 1000){ 
+				alert("Tankissa a on" + " " + (tankkia - value3) + " " + "polttoainetta tankissa b on" + " " + (tankkib) + " " + "polttoainetta ja tankissa c on" + " " + (tankkic + value3) + " " + "polttoainetta");
+			}
+                        else if(value == 2 && value1 == 1 && value2 <= 1000){ 
+				alert("Tankissa a on" + " " + (tankkia + value3) + " " + "polttoainetta tankissa b on" + " " + (tankkib - value3) + " " + "polttoainetta ja tankissa c on" + " " + (tankkic) + " " + "polttoainetta");
+			}
+                        else if(value == 2 && value1 == 3 && value2 <= 1000){ 
+				alert("Tankissa a on" + " " + (tankkia) + " " + "polttoainetta tankissa b on" + " " + (tankkib - value3) + " " + "polttoainetta ja tankissa c on" + " " + (tankkic + value3) + " " + "polttoainetta");
+			}
+                        else if(value == 3 && value1 == 1 && value2 <= 1000){ 
+				alert("Tankissa a on" + " " + (tankkia + value3) + " " + "polttoainetta tankissa b on" + " " + (tankkib) + " " + "polttoainetta ja tankissa c on" + " " + (tankkic - value3) + " " + "polttoainetta");
+			}
+                        else if(value == 3 && value1 == 2 && value2 <= 1000){ 
+				alert("Tankissa a on" + " " + (tankkia) + " " + "polttoainetta tankissa b on" + " " + (tankkib + value3) + " " + "polttoainetta ja tankissa c on" + " " + (tankkic - value3) + " " + "polttoainetta");
+			}
+			else {
+				alert("Annoit v‰‰r‰n arvon tai koitit siirt‰‰ enemm‰n polttoainetta kuin tankissa oli");
+			}
+			
+			
+
+
+  </script>
+
+
+</body>
+
+</html>

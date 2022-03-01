@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		
+	</head>
+	<body>	
+	Anna nopeus: 
+	<input id="nopeus" type="number"/>
+	Anna rajoitus: 
+	<input id="rajoitus" type="number"/>
+	<button type="button" onclick="nopeusTarkastus();">Nopeus</button>
+	<div id="laatikko"></div>
+	<script>
+	
+	function nopeusTarkastus() {
+	var tulostus = "";
+	var nopeus = document.getElementById("nopeus").value;
+	var rajoitus = document.getElementById("rajoitus").value;
+	var extra = document.getElementById("rajoitus").value + 20;
+	
+	
+	if(nopeus <= rajoitus) { 
+			tulostus = "Toivota hyvää matkaa!"; }
+	
+	else if(nopeus - rajoitus <= 20) { //Tämä rivi tuotti alkuun ongelmia mutta sain muutettua sen toimivaan muotoon
+			
+					if (rajoitus <= 60) { //Tässä tulee lisää ehtoja nopeuden mukaan rikesakkoa saavalle
+					
+						if (nopeus - rajoitus <= 15) {
+						tulostus = "Rikesakkoa" + " " + (nopeus - rajoitus) * 170 + " " + "euroa." ;
+													}
+						
+						else {tulostus = "Rikesakkoa" + " " + (nopeus - rajoitus) * 200 + " " + "euroa." ;
+							}
+				
+										}
+				
+					else {
+					
+						if (nopeus - rajoitus <= 15) {
+						tulostus = "Rikesakkoa" + " " + (nopeus - rajoitus) * 140 + " " + "euroa." ; //Tykkään käyttää " " selkeyden vuoksi, ei pääse unohtumaan välit
+													} 
+						
+						else {
+						tulostus = "Rikesakkoa" + " " + (nopeus - rajoitus) * 200 + " " + "euroa." ;
+							}
+						}
+			}
+			
+    else {
+	tulostus = "Kysy tulot ja laske päiväsakko";
+	}
+	
+	document.getElementById("laatikko").innerHTML = tulostus;
+	
+	
+	}
+	
+	</script>
+	</body>
+	
+	
+</html>

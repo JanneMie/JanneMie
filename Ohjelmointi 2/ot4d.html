@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+
+x1: <input id="x1"/><br/>
+x2: <input id="x2"/><br/>
+y1: <input id="y1"/><br/>
+y2: <input id="y2"/><br/>
+<button type="button" onclick="laskePituus();">Tulosta janan pituus</button>
+<p id="laatikko"></p>
+
+<script>
+	
+	function laskePituus() {
+	var x1 = document.getElementById("x1").value;
+    var x2 = document.getElementById("x2").value;
+    var y1 = document.getElementById("y1").value;
+    var y2 = document.getElementById("y2").value;
+	
+	var a = x2 - x1;
+	var b = y2 - y1;
+	var c = Math.sqrt((a*a) + (b*b));
+	document.getElementById("laatikko").innerHTML = "Janan pituus on: " + c;	
+	}
+	
+
+</script>
+
+</body>
+</html>
+
+

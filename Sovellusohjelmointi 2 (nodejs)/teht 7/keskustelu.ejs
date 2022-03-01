@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 7</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+          color: green;
+          background-color: rgb(165, 161, 161);
+        }
+        </style>
+</head>
+<body>
+    
+    <div class="container">
+
+    <h1>Tehtävä 7</h1>
+
+    <h2 class="mb-3">Keskustelun tiedot</h2>
+
+    <form method="POST" action="/tallenna/">
+
+        <div class="form-group">
+            <label for="otsikko">Otsikko:</label>
+            <input class="form-control col-lg-6" type="text" name="otsikko" id="otsikko" value="<%=keskustelut.otsikko%>">
+        </div>
+
+        <div class="form-group" id="editor">
+            <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+            
+            <script>
+                CKEDITOR.replace( 'editor' );
+            </script> 
+            <label for="sisältö">Sisältö:</label>
+            <input class="form-control col-lg-6" type="text" name="sisältö" id="sisältö" value="<%=keskustelut.sisältö%>">
+            
+        </div>
+
+    <div class="form-group">
+        <label for="kirjoittaja">Kirjoittaja:</label>
+        <input class="form-control col-lg-6" type="text" name="kirjoittaja" id="kirjoittaja" value="<%=keskustelut.kirjoittaja%>">
+    </div>
+
+    
+
+    <input type="hidden" name="otsikko" value="<%=keskustelut.otsikko%>">
+
+    <input class="btn btn-primary" type="submit" value="Tallenna muutokset">
+    <a class="btn btn-secondary" href="/">Peruuta</a>
+
+    </form>
+
+
+    </div>
+
+</body>
+</html>

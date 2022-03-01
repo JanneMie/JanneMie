@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+</head>
+<body>
+<img id="img" src="kuvat/autovihrea.jpg" width="400" height="300"/><br/>
+<img id="img2" src="kuvat/kävelypunainen.jpg" width="400" height="300"/><br/>
+
+<br/><br/>
+
+<a href="#" onclick="t = setInterval(animaatio, 1000);">Aloita</a>
+<a href="#" onclick="clearTimeout(t)">Pysäytä</a>
+
+<script>
+	
+	var t;
+	var images = [],
+	x = 0;
+	//ladataan kuvat taulukkoon, osassa sama kuva keston pituuden takia
+	images[0] = "kuvat/autovihrea.jpg";
+	images[1] = "kuvat/autokeltainen.jpg";
+	images[2] = "kuvat/autokeltainenjapunainen.jpg";
+	images[3] = "kuvat/autopunainen.jpg";
+	images[4] = "kuvat/autopunainen.jpg";
+	images[5] = "kuvat/autokeltainenjapunainen.jpg";
+	images[6] = "kuvat/autokeltainen.jpg";
+	images[7] = "kuvat/autovihrea.jpg";
+
+	var images2 = [], //Kaksi arrayta kahden eri kuvan näyttämiseksi
+	y = 0;
+	images2[0] = "kuvat/kävelypunainen.jpg";
+	images2[1] = "kuvat/kävelypunainen.jpg";
+	images2[2] = "kuvat/kävelypunainen.jpg";
+	images2[3] = "kuvat/kävelyvihreä.jpg";
+	images2[4] = "kuvat/kävelyvihreä.jpg";
+	images2[5] = "kuvat/kävelypunainen.jpg";
+	images2[6] = "kuvat/kävelypunainen.jpg";
+	images2[7] = "kuvat/kävelypunainen.jpg";
+	
+	function animaatio()
+	{	
+		var img = document.getElementById("img"); //Kuva 1
+		img.src = images[x]; //näytetään vuorossa oleva kuva taulukosta
+		x++;
+
+		if(x >= images.length){ 
+			x = 0;
+		}   
+		var img2 = document.getElementById("img2"); //Kuva 2
+		img2.src = images2[y]; //näytetään vuorossa oleva kuva taulukosta
+		y++;
+
+		if(y >= images2.length){ //Kun käydään kuvat läpi aloitetaan alusta
+			y = 0;
+		}   
+		
+	}
+	
+	
+</script>
+</body>
+</html>

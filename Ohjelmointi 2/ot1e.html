@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Presidentin vaalit 2024</title>
+	<h1> Äänten laskenta<h1>
+</head>
+<body>
+	<button type="button" onclick="kasvata();"> 2 </button>
+	<button type="button" onclick="kasvata1();"> 3 </button>
+	<button type="button" onclick="kasvata2();"> 4 </button>
+	<button type="button" onclick="kasvata3();"> 5 </button>
+	<button type="button" onclick="kasvata4();"> 6 </button>
+	
+	<h1> Tulos: </h1>
+	
+	<p>2. Ville Koivisto<p><h1 id="tulostusAlue1">	18	</h1>
+	<p>3. Urho Obama<p><h1 id="tulostusAlue2">	12	</h1>
+	<p>4. Marja Kekki</p><h1 id="tulostusAlue3">	69	</h1>
+	<p>5. Sinikka Soini</p><h1 id="tulostusAlue4">	14	</h1>
+	<p>6. Jussi Haavisto</p><h1 id="tulostusAlue5">	51	</h1>
+	
+	<script>
+	
+	let luku1 = 18;
+	let luku2 = 12; 
+	let luku3 = 69; 
+	let luku4 = 14; 
+	let luku5 = 51; 
+	
+	
+	function kasvata(){ //Kasvatetaan arvoa yhdellä kyseiselle luvulle. ylempänä jokaiselle luvulle oma tulostusalueensa.
+		luku1++; 
+		document.getElementById("tulostusAlue1").innerHTML = luku1;
+	}
+	function kasvata1(){
+		luku2++; 
+		document.getElementById("tulostusAlue2").innerHTML = luku2;
+	}
+	function kasvata2(){
+		luku3++; 
+		document.getElementById("tulostusAlue3").innerHTML = luku3;
+	}
+	function kasvata3(){
+		luku4++; 
+		document.getElementById("tulostusAlue4").innerHTML = luku4;
+	}
+	function kasvata4(){
+		luku5++; 
+		document.getElementById("tulostusAlue5").innerHTML = luku5;
+	}
+	
+	</script>
+</body>
+</html>

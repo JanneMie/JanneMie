@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		
+	</head>
+	<body>	
+	
+	<button type="button" onclick="kuluvaTunti();">Päivänaika</button>
+	<div id="laatikko"></div>
+	
+	<script>
+	
+	function kuluvaTunti() { //Funktio toivottaa päivänaikaa laittaminani tunteina ja tulostus menee "laatikkoon"
+	
+	let kuluvaTunti = new Date().getHours() ;
+	
+	if(kuluvaTunti < 6 && kuluvaTunti >= 24) { 
+			tulostus = "Hyvää yötä!"; }
+	
+	else if(kuluvaTunti < 12 && kuluvaTunti >= 6) { 
+			tulostus = "Hyvää huomenta!"; }
+			
+	else if(kuluvaTunti < 18 && kuluvaTunti >= 12) { 
+			tulostus = "Hyvää päivää!"; }
+			
+	else if(kuluvaTunti < 24 && kuluvaTunti >= 18) { 
+			tulostus = "Hyvää iltaa!"; }
+	
+	
+	document.getElementById("laatikko").innerHTML = tulostus;
+	
+	
+	}
+	
+	</script>
+	</body>
+	
+	
+</html>

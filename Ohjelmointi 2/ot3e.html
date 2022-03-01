@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Array</title>
+</head>
+<body>
+    <button type="button" onclick="siirto();">Polttoaine</button>
+	<div id="tulostusAlue">	</div>
+	<script>
+	
+	
+	 let value1 = prompt("Kuinka monta tankkia? (2-50)", "");
+	 let value2 = prompt("Mistä tankista siirretään?", "");
+     let value3 = prompt("Mihin tankkiin siirretään?", "");
+     let value4 = prompt("Kuinka paljon siirretään tonneina? (0-10000)", "");
+
+var tankit = [];
+
+
+for(var i=0; i<value1; i++) {
+
+tankit[i] = 10000; //Polttoaineen määrä alussa kaikkiin tankkeihin
+}
+	
+
+
+
+function siirto() {  
+
+var vaihto1 = tankit[value2] - value4;
+var vaihto2 = tankit[value3] + value4; 
+let tulostus = "";
+for (let i = 0;i < tankit.length; i++) { //Käydään läpi arrayn arvot
+tulostus += "<br/>" + (i + 1) + " . . . . . " + tankit[i]; } //tulostetaan array alekkain
+var korjaus1 = value2 - 1;
+var korjaus2 = value3 - 1;
+tankit[korjaus1] = 10000 - value4; //Käyttäjän antaman arvon siirto tankista toiseen
+tankit[korjaus2] = 10000 - (-value4);
+if (tankit.length >= 2 && tankit.length <= 50 && value4 <= 10000) { //tarkastetaan että käyttäjä antaa hyväksytyn määrän tankkeja ja polttoainetta
+
+document.getElementById("tulostusAlue").innerHTML = "Paina kerran nähdäksesi aloitustilanne, toisen kerran siirron tuloksen näkymiseksi" + " " + tulostus;
+}
+ 
+else {
+document.getElementById("tulostusAlue").innerHTML = "Annoit väärän arvon";}
+}
+
+	
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+

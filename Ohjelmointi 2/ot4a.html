@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<script>
+</script>
+</head>
+
+<body>
+Numero: <input id="Numero"/><br/>
+<button type="button" onclick="tarkastaPostiNumero();">Tarkasta Postinumero</button>
+<p id="laatikko"></p>
+
+<script>
+	
+	function tarkastaPostiNumero(){  
+			var Numero = document.getElementById("Numero").value;
+			
+			if(Numero.length == 5) {  //Tarkastetaan että numeroiden määrä on kohdallaan
+			   
+			    console.log("On postinumero");
+				document.getElementById("laatikko").innerHTML = "On postinumero";
+				 return true;
+			}
+			else {
+			    
+			    console.log("Ei ole postinumero");
+				document.getElementById("laatikko").innerHTML = "Ei ole postinumero";
+				return false;
+			}
+			
+		}
+</script>
+
+</body>
+</html>
+
+

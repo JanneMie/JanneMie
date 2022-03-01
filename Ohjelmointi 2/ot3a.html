@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Viiden alkion taulukko</title>
+	</head>
+	<body>
+	 <div id="laatikko"></div>   
+	<script>
+		//Ohjelma laskee arrayn alkioiden summan
+		var luvut = [2,5,11,14,15]; //alkioiden arvot
+		var summa = 0; //alustus
+		
+		//arrayn alkioiden summa
+		summa = luvut[0] + luvut[1] + luvut[2] +luvut[3] +luvut[4];
+		
+			
+	    var keskiarvo = summa / 5; //Jaetaan summa alkoiden määrällä ja näin saadaan keskiarvo
+		
+		luvut.sort;
+		// tulosta ensimmäinen ja viimeinen luku, näin saadaan pienin ja isoin numero
+		
+	  
+		document.getElementById("laatikko").innerHTML = "Kaikki luvut" + " " + luvut + "<br>" + "keskiarvo on" + " " + keskiarvo + "<br>" +
+		"pienin luku on" + " " + luvut[0] + "<br>" + "ja suurin luku on" + " " + luvut[4];  
+        </script>
+    </body>
+</html>
+
+
+

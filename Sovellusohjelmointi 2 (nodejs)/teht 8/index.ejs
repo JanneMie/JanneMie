@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Tehtävä 8</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+
+        <style>
+            body {
+              color: green;
+              background-color: rgb(165, 161, 161);
+            }
+            </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+
+        <h1 class="mb-3">Tehtävä 8</h1>
+
+        <h2 class="mb-3">Elokuvahaku</h2>
+
+        <form class="form-inline" method="POST" action="/haku">
+            <div class="card w-100">
+                <div class="card-body">
+                <input class="form-control" type="text" name="hakusana" value="<%=lomaketiedot.hakusana%>" placeholder="Anna hakusana..." size="60">
+                <input class="btn btn-primary" type="submit" value="Käynnistä haku">
+
+                <div class="row">
+                    <%- include("includes/haunkohde", { "hakuArvo" : "nimi", "luottokorttiTeksti" : "nimi" }) %>                  
+                    <%- include("includes/haunkohde", { "hakuArvo" : "valmistumisvuosi", "luottokorttiTeksti" : "valmistumisvuosi" }) %>                  
+                    <%- include("includes/haunkohde", { "hakuArvo" : "ohjaajat", "luottokorttiTeksti" : "ohjaajat" }) %>                  
+                    <%- include("includes/haunkohde", { "hakuArvo" : "nayttelijat", "luottokorttiTeksti" : "nayttelijat" }) %>                  
+                </div>                
+
+                </div>
+            </div>
+        </form>
+
+        <% if (virhe) {%> 
+           
+        <div class="alert alert-danger mt-3">
+            <%=virhe%>
+
+           
+        </div>        
+
+        <% } %>
+
+        <% if (elokuvat) { %> 
+
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Nimi</th>
+                    <th>Valmistumisvuosi</th>
+                    <th>Ohjaajat</th>
+                    <th>Näyttelijät</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% elokuvat.forEach((elokuva) => { %>
+                <tr>
+                    <td><%=elokuva.nimi%></td>
+                    <td><%=elokuva.valmistumisvuosi%></td>
+                    <td><%=elokuva.ohjaajat%></td>
+                    <td><%=elokuva.nayttelijat%></td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+
+        <% } %>
+        <% if (virhe2) {%>  
+        <div class="alert alert-danger mt-3">
+        <%=virhe2%>
+    </div>
+    <% } %>
+        </div>
+
+    </body>
+</html>

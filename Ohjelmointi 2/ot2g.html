@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		
+	</head>
+	<body>	
+	
+	<h2>Sijoituslaskuri</h2>
+	 Alkupääoma
+	 <br>
+	 <input id="Alkupaaoma" type="number"/>
+	 <br>
+	 Tavoitepääoma
+	 <br>
+	 <input id="Tavoitepaaoma" type="number"/>
+	 <br>
+	 Tuottoprosentti
+	 <br>
+	 <input id="Tuottoprosentti" type="number"/>
+	 <br>
+	 <button id="nappi" type="button" onclick="Laske();">Laske</button>
+	 <div id="tulostusAlue"></div>
+	 <p id="lkm"></p>
+	<script>
+	
+	function Laske() {
+	var Alkupaaoma = document.getElementById("Alkupaaoma").value; //Piti hoksata .value laittaa loppuun, muuhen herjasi NaN ym.
+	var Tavoitepaaoma = document.getElementById("Tavoitepaaoma").value;
+	var Tuottoprosentti = document.getElementById("Tuottoprosentti").value;
+
+	var x = 1 + (Tuottoprosentti / 100); //periaatteessa tarpeeton rivi mutta virheiden eliminoimiseksi siirsin tänne
+	 var text = "";
+	 var vuosi = []; //Array vuosien laskemiseksi
+	 document.getElementById("lkm").innerHTML = vuosi;
+	
+	do {
+	
+	Alkupaaoma = Alkupaaoma * x;
+	document.getElementById("Alkupaaoma").innerHTML = vuosi.push("x"); //Tallennetaan arvot array taulukkoon
+
+	}
+	
+	while (Alkupaaoma < Tavoitepaaoma); //Jatketaan kunnes saadaan tavoitepääoma
+	
+	document.getElementById("tulostusAlue").innerHTML = "Tavoitteen saavuttamiseen menee" + " "  + vuosi.length + " " + "vuotta."; //Vuosien lukumäärä saadaan arrayn arvojen määrästä
+	}
+	</script>
+	</body>
+	
+	
+</html>

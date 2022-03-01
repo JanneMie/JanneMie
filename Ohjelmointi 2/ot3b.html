@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Elokuvat</title>
+</head>
+<body><br/><br/>
+Anna nimi:
+<input id="elokuva" />
+<br/><br/>
+<button onclick="lisaaTaulukkoon()">Lisää elokuva</button>
+<button onclick="sort()">Lista elokuvista</button>
+<button onclick="search()">Haku</button>
+<br/>
+<br/>
+<div id="tulostusAlue">
+</div>
+<script>
+//Ohjelma lisää taulukkoon (array) nimiä sitä mukaa kun käyttäjä haluaa
+
+var elokuvat = []; //Array elokuvista
+function lisaaTaulukkoon() {
+	var tulostus = "";
+	var elokuva = document.getElementById("elokuva").value;
+	//lisätään uusi nimi arrayn loppuun
+	elokuvat.push(elokuva); 
+	
+	document.getElementById("tulostusAlue").innerHTML = tulostus;
+	document.getElementById("elokuvat").value = ""; //tyhjennetään input-kenttä
+	document.getElementById("elokuvat").focus();//kursori valmiiksi inputtiin
+	//Tulostus
+	
+	for(var i = 0; i < elokuvat.length;i++) {
+		tulostus += elokuvat[i] + "<br/>";		//kootaan tulostettava merkkijono
+	}
+}	
+
+function sort() {
+elokuvat = elokuvat.sort();
+			var tulostus = "";
+			for(var i = 0; i < elokuvat.length;i++) {
+            tulostus += elokuvat[i] + "<br/>";}	 //tulostaa listan aakkosjärjestyksessä
+
+	
+	
+	document.getElementById("tulostusAlue").innerHTML = tulostus;
+	document.getElementById("elokuvat").value = ""; //tyhjennetään input-kenttä
+	document.getElementById("elokuvat").focus();//kursori valmiiksi inputtiin
+}
+
+function search() {
+var elokuva = document.getElementById("elokuva").value;
+var a = elokuvat.lastIndexOf(elokuva);
+document.getElementById("tulostusAlue").innerHTML = "Elokuva löytyy listan kohdasta " + (a + 1);
+}
+</script>
+</body>
+</html>
+	

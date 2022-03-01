@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Laskin</title>
+</head>
+<body>
+	<h1>Valuuttalaskin</h1>
+	Summa: <input id="luku_1"/> <br/>
+	
+	<button type="button" onclick="laskeSumma1();">EUR -> USD</button>
+	<button type="button" onclick="laskeSumma2();">USD -> EUR</button>
+	<br/>
+	<div id="tulostusAlue">	
+	</div>
+	<script>
+		function laskeSumma1(){
+			//Ohjelma muuntaa rahan
+			
+			
+			let ekaluku = Number(document.getElementById("luku_1").value); //Haetaan arvo käyttäjän syöttämästä tiedosta
+			
+			
+			
+			let summa1 = ekaluku * 1.10618 ;
+			
+			//tulostus
+			document.getElementById("tulostusAlue").innerHTML = summa1 + " $";
+		}
+		function laskeSumma2(){
+			//Ohjelma muuntaa rahan
+			
+			
+			let ekaluku = Number(document.getElementById("luku_1").value); 
+			
+			
+			
+			let summa2 = ekaluku * 0.9041;
+			
+			//tulostus
+			document.getElementById("tulostusAlue").innerHTML = summa2 + " €";
+		}
+	</script>
+</body>
+</html>

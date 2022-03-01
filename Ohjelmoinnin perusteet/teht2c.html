@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+
+
+  <script>
+    'use strict';
+      let value = prompt("Anna verotettavan ansiotulosi vuosisumma", "");
+
+      let euro1 = (value - 8) *0.06;
+      let euro2 = (value - 536) *0.1725;
+      let euro3 = (value - 3485) *0.2125;
+      let euro4 = (value - 10413) *0.3125;
+
+      let euro5 = (euro1 + 8);
+      let euro6 = (euro2 + 536);
+      let euro7 = (euro3 + 3485);
+      let euro8 = (euro4 + 10413);
+
+      
+
+let message = (value == 0) ? "No ei sitten!" :
+
+  (value < 26400) ? euro5 :
+  (value < 43500) ? euro6 :
+  (value < 76100) ? euro7 :
+  (value > 76100) ? euro8 :
+  'Outo numero!';
+
+alert("Maksamasi veron m‰‰r‰ vuodessa on" + " " + message + " " + "euroa." );
+
+
+  </script>
+
+
+</body>
+
+</html>

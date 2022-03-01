@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 7</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+          color: green;
+          background-color: rgb(165, 161, 161);
+        }
+        </style>
+</head>
+<body>
+    
+    <div class="container">
+
+    <h1>Tehtävä 7</h1>
+
+    <h2 class="mb-3">Keskustelupalsta</h2>
+
+    <table class="table table-bordered">
+        <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+        
+        <script>
+            CKEDITOR.replace( 'editor' );
+        </script> 
+        <tbody>
+    
+    <% keskustelut.forEach((keskustelu) => { %>
+
+        <tr>
+            <td>
+                <a href="/muokkaa/<%=keskustelu.otsikko%>"><%=keskustelu.otsikko%></a>
+            </td>
+            <td id="editor"><%=keskustelu.sisältö%></td>
+            <td><%=keskustelu.kirjoittaja%></td>
+            <td><%=keskustelu.aikaleima%></td>
+            
+        </tr>
+
+    <% }); %>
+
+   
+
+        </tbody>
+    </table>
+
+    <form method="GET" action="/uusi/">
+        <input class="btn btn-primary" type="submit" value="Aloita uusi keskustelu">
+    </form>
+
+    </div>
+
+    
+
+</body>
+</html>

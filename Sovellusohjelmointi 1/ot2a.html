@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+  #laatikko {
+  
+  margin: 0 auto 0 auto;
+  position: relative;
+  text-align: center;
+  
+ }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>ot2a</title>
+  </head>
+  <body>  
+	<button id="tulosta">Tulosta tiedosto</button>
+	<br/>
+	<div id="laatikko">
+	<tr>
+
+	</tr>
+	</div>
+  <script>
+  //Ohjelma hakee palvelimelta tekstitiedoston ja tulostaa sen
+	$(document).ready(function(){ //ohjelma suoritetaan vasta kun sivu on latautunut
+		$("#tulosta").click(function(){ //kun käyttäjä klikkaa nappia
+			$.ajax({url: "http://localhost/teht2a/tuotteet.csv", //haettava tiedosto on heippa.txt
+						dataType: "text",
+						success: function(result) { //Jos haku onnistuu, niin tiedosto kopioidaan result-nimiseen muuttujaan
+						tulostaLuettelo(result); //lähetetään result tulostettavaksi
+					}
+				});
+			});
+		});
+
+	//Tulostusosa
+	function tulostaLuettelo(result){
+	console.log(result);
+var ips=result.split(/\r?\n|\r/);
+ var table_data = "<table border='1'>";
+var i = " ";
+
+for
+(var count = 0; count<ips.length; count++)
+    {
+     var cell_data = ips[count].split(";");
+     table_data += '<tr>';
+     for(var cell_count=0; cell_count<cell_data.length; cell_count++)
+     {
+      if(count === 0)
+      {
+       table_data += '<th>'+cell_data[cell_count]+'</th>';
+      }
+      else
+      {
+       table_data += '<td>'+cell_data[cell_count]+'</td>';
+      }
+     }
+     table_data += '</tr>';
+    }
+    table_data += '</table>';
+    $('#laatikko').html(table_data);
+   }
+	
+	</script>
+  </body>
+</html>

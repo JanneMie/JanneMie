@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#avaa1").click(function(){
+     $("#row1").slideToggle("slow"); //Jokaiselle uutiselle oma avausnappinsa
+  });
+   $("#avaa2").click(function(){
+     $("#row2").slideToggle("slow");
+  });
+   $("#avaa3").click(function(){
+     $("#row3").slideToggle("slow");
+  });
+   $("#avaa4").click(function(){
+     $("#row4").slideToggle("slow");
+  });
+   $("#avaa5").click(function(){
+     $("#row5").slideToggle("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip, #avaa1, #avaa2, #avaa3, #avaa4, #avaa5, #row1, #row2, #row3, #row4, #row5 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel, #row1, #row2, #row3, #row4, #row5 {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<div id="avaa1">Lakko uhkaa iskeä bensanjakeluun</div>
+<ul class = "row1">
+<div id="row1">– Pitkäaikainen häiriö (polttoaineiden) jakelussa lamaannuttaisi yhteiskunnan liikkumisen ja lämmityksen, pelastus- ja viranomaistoiminnan sekä elintarvikehuollon. Lisäksi se vaikeuttaisi merkittävästi Suomen vientitoimintaan monilla aloilla, Neste noitui tiedotteessaan.
+
+Nesteellä on öljynjalostamot Naantalissa ja Porvoossa. Suomen Nesteen toiminnoissa lakkouhan piirissä on yhteensä noin 1 400 henkilöä.
+
+Työriitaa ratkottiin tiistaina valtakunnansovittelijan toimistolla. Myöhemmin tiistai-iltapäivänä valtakunnansovittelija tiedotti, että osapuolet jatkavat neuvotteluja ”ripeässä tahdissa” ilman valtakunnansovittelijan apua.</div>
+</ul>
+
+<div id="avaa2">Trumpin virkarikossyytteet toimitettiin senaatin eteen</div>
+<ul class = "row2">
+<div id="row2">Presidentti Donald Trumpin virkarikossyytteet on toimitettu senaatin käsittelyyn. Republikaanien Mitch McConnell sanoi, että senaatti hyväksyy syytteet muodollisesti muodollisesti torstaina.
+
+Eilisen äänestyksen jälkeen edustajainhuoneen puheenjohtaja Nancy Pelosi allekirjoitti kaksi presidenttiä koskevaa virkarikossyytettä. Edustajainhuone päätti eilen lähettää Trumpin virkarikossyytteet senaatin käsittelyyn. Päätös syntyi äänin 228-193.
+
+Trumpia syytetään vallan väärinkäyttämisestä ja kongressin tutkinnan estämisestä. Virkasyytteiden nostamisesta päätettiin edustajainhuoneessa jo joulukuussa, mutta asian viemistä senaattiin oli tähän asti lykätty.
+
+BBC:n mukaan Trumpin virkarikosoikeudenkäynnin on tarkoitus alkaa ensi tiistaina.</div>
+</ul>
+
+<div id="avaa3">Autokauppavelka johti raakaan kaksoismurhaan Valkeakoskella</div>
+<ul class = "toggle">
+<div id="row3">Hovioikeus antoi asiassa keskiviikkona välituomion. Tuomiollaan hovioikeus passitti Petri Tapani Alpin, 34, ja Tino Dimitri Paunassalon, 30, oikeuslääketieteelliseen mielentilatutkimukseen.
+
+Oikeudenkäynti jatkuu myöhemmin, kun hovioikeudella on käytössään Terveyden ja hyvinvoinnin laitoksen lausunnot vastaajien mielentilasta.
+
+Turun hovioikeuden mukaan hovioikeuden pääkäsittelyssä (istunnossa) on tullut esiin seikkoja, joiden perusteella on syytä epäillä, olivatko Alppi ja Paunassalo henkirikosten aikaan täydessä ymmärryksessä.</div>
+</ul>
+
+<div id="avaa4">Hornet-hävittäjä aiheutti kovia pamauksia</div>
+<ul class = "toggle">
+<div id="row4">Ilmavoimat kertoi keskiviikkona aamupäivällä suorittaneensa ”alueellisen koskemattomuuden valvontaan liittyvän lentotehtävän Suomenlahdelle”. Ilmavoimien mukaan lentotoiminnassa käytettiin myös yliääninopeuksia, minkä takia Etelä-Suomessa kuului voimakasta lentomelua.
+
+Moni Iltalehteen keskiviikkoaamuna yhteyttä ottanut lukija kertoikin kuulleensa huomattavan kovan pamauksen tai pamauksia. Havaintoja oli tehty mm. Vihdissä, Espoossa, Valkeakoskella ja Hämeenlinnassa. Yliääninopeudessa kone lentää niin suurella nopeudella, että äänivalli rikkoutuu.</div>
+</ul>
+
+<div id="avaa5">Torstaina sää on osin poutainen</div>
+<ul class = "toggle">
+<div id="row5">Torstai valkenee pääosin poutaisena. Etelärannikkoa hipoo vesisadealue, joka siirtyy päivän mittaan kohti itää. Sateet voivat tulla vetenä tai tihkuna. Keski-Suomessa on poutaista. Pilvipeitettä on etelässä ja keskisessä Suomessa.
+
+Kainuussa ja Pohjois-Pohjanmaalla on pieniä sadealueita. Lapissa on heikkoa lumisadetta. Pohjois-Lapissa lumisade voi olla voimakastakin pitkin päivää. Tästä syystä voimassa on kelivaroitus.
+
+Aamun tunteina Pohjois-Savossa ja Kainuussa jalankulkutiet voivat olla liukkaita vesisateen vuoksi.</div>
+</ul>
+
+</body>
+</html>

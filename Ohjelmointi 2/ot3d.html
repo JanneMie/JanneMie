@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Array</title>
+</head>
+<body>
+	<h1>Teatteri</h1>
+	<p>X = Varattu O = Vapaa</p>
+	<br>
+	<p>Anna paikan numero:</p>
+	<button type="button" onclick="varausTarkastus();"> Varaa </button>
+	 <input id="paikkaKysely" />
+	 <p>Paikka Varaus</p>
+	 <p>-------------</p>
+	<div id="tulostusAlue">	</div>
+	<script>
+	
+	
+	var IstumaPaikat = [];
+	 IstumaPaikat[0] = "X";
+     IstumaPaikat[1] = "X";
+     IstumaPaikat[2] = "O";  
+     IstumaPaikat[3] = "O";
+	  IstumaPaikat[4] = "X";
+     IstumaPaikat[5] = "X";
+     IstumaPaikat[6] = "O";  
+     IstumaPaikat[7] = "O";
+	  IstumaPaikat[8] = "X";
+     IstumaPaikat[9] = "X";
+     IstumaPaikat[10] = "O";  
+     IstumaPaikat[11] = "O";
+	  IstumaPaikat[12] = "X";
+     IstumaPaikat[13] = "X";
+     IstumaPaikat[14] = "O";  
+     IstumaPaikat[15] = "O";
+	  IstumaPaikat[16] = "X";
+     IstumaPaikat[17] = "X";
+     IstumaPaikat[18] = "O";  
+     IstumaPaikat[19] = "O";
+	  IstumaPaikat[20] = "X";
+     IstumaPaikat[21] = "X";
+     IstumaPaikat[22] = "O";  
+     IstumaPaikat[23] = "O";
+	  IstumaPaikat[24] = "X";
+     IstumaPaikat[25] = "X";
+     IstumaPaikat[26] = "O";  
+     IstumaPaikat[27] = "O";
+	  IstumaPaikat[28] = "X";
+     IstumaPaikat[29] = "X";
+     IstumaPaikat[30] = "O";  
+     IstumaPaikat[31] = "O";
+	  IstumaPaikat[32] = "X";
+     IstumaPaikat[33] = "X";
+     IstumaPaikat[34] = "O";  
+     IstumaPaikat[35] = "O";
+	  IstumaPaikat[36] = "X";
+     IstumaPaikat[37] = "X";
+     IstumaPaikat[38] = "O";  
+     IstumaPaikat[39] = "O";
+	  IstumaPaikat[40] = "X";
+     IstumaPaikat[41] = "X";
+     IstumaPaikat[42] = "O";  
+     IstumaPaikat[43] = "O";
+	  IstumaPaikat[44] = "X";
+     IstumaPaikat[45] = "X";
+     IstumaPaikat[46] = "O";  
+     IstumaPaikat[47] = "O";
+	  IstumaPaikat[48] = "X";
+     IstumaPaikat[49] = "X";
+     IstumaPaikat[50] = "O";  
+     IstumaPaikat[51] = "O";
+	  IstumaPaikat[52] = "X";
+     IstumaPaikat[53] = "X";
+     IstumaPaikat[54] = "O";  
+     IstumaPaikat[55] = "O";
+	  IstumaPaikat[56] = "X";
+     IstumaPaikat[57] = "X";
+     IstumaPaikat[58] = "O";  
+     IstumaPaikat[59] = "O";
+	  IstumaPaikat[60] = "X";
+     IstumaPaikat[61] = "X";
+     IstumaPaikat[62] = "O";  
+     IstumaPaikat[63] = "O";
+	  IstumaPaikat[64] = "X";
+     IstumaPaikat[65] = "X";
+     IstumaPaikat[66] = "O";  
+     IstumaPaikat[67] = "O";
+	  IstumaPaikat[68] = "X";
+     IstumaPaikat[69] = "X";
+     IstumaPaikat[70] = "O";  
+     IstumaPaikat[71] = "O";
+	  IstumaPaikat[72] = "X";
+     IstumaPaikat[73] = "X";
+     IstumaPaikat[74] = "O";  
+     IstumaPaikat[75] = "O";
+	  IstumaPaikat[76] = "X";
+     IstumaPaikat[77] = "X";
+     IstumaPaikat[78] = "O";  
+     IstumaPaikat[79] = "O";
+	 
+
+//var first = numbers.findIndex(VarausTarkastus);
+
+var O = "O";
+let tulostus = "";
+for (let i = 0;i < IstumaPaikat.length; i++) { //Käydään läpi arrayn arvot
+tulostus += "<br/>" + (i + 1) + " . . . . . " + IstumaPaikat[i]; }
+function varausTarkastus() {
+var paikka = document.getElementById("paikkaKysely").value; //Käyttäjän antama luku
+var korjaus = paikka - 1; //Korjaa arrayn istumapaikan numeron listan numeroa vastaavaksi
+if (IstumaPaikat[korjaus] == O) { //Jos käyttäjän antama numero on vapaa niin tulostetaan vapaa
+document.getElementById("tulostusAlue").innerHTML = "Paikka on VAPAANA!" + "<br/>" +  tulostus;}
+
+else {
+document.getElementById("tulostusAlue").innerHTML = "Paikka on jo VARATTU!" + "<br/>" +  tulostus;
+}
+
+}
+
+	</script>
+</body>
+</html>

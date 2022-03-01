@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Toistorakenteet</title>
+    </head>
+    <body>
+    <button type="button" onclick="toista();">Laske</button>
+    <br/>
+    <div id="tulostusAlue"></div>
+    <script>
+   
+    function toista(){     
+        
+        var text = "";
+		var x = 1; //Jotta toisto alkaa 1:stä
+		
+		do {
+		text += "<br> " + x; //Jokainen numero omalle rivilleen
+		x = x * 5; //Tämän löytäminen tähän kohtaan oli hankalin osuus, x saa uuden arvon kertomalla se viidellä seuraavaa numeroa varten
+		}
+		while (x < 20000); //Lopetetaan toisto kunnes tämä arvo löytyy
+		
+		document.getElementById("tulostusAlue").innerHTML = text;
+		
+		
+		
+		}
+	
+		
+		
+		 
+	   
+	   
+	
+    </script>   
+    </body>
+</html>

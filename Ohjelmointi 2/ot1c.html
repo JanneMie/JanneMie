@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Laskin</title>
+</head>
+<body>
+	<h1>PC hinta (anna hinta kullekin paketin osalle)</h1>
+	Näytönohjain: <input id="luku_1"/> <br/>
+	Emolevy: <input id="luku_2"/><br/><br/>
+	Prosessori: <input id="luku_3"/> <br/>
+	Muisti: <input id="luku_4"/><br/><br/>
+	Kiintolevy: <input id="luku_5"/> <br/>
+	Kotelo: <input id="luku_6"/><br/><br/>
+	Virtalähde: <input id="luku_7"/> <br/>
+	
+	<button type="button" onclick="laskeSumma();">Laske summa</button>
+	<br/>
+	<div id="tulostusAlue">	
+	</div>
+	<script>
+		function laskeSumma(){
+			//Ohjelma laskee luvut yhteen
+			
+			
+			
+			let tokaluku = Number(document.getElementById("luku_2").value);
+			let kolmasluku = Number(document.getElementById("luku_3").value);
+			let neljasluku = Number(document.getElementById("luku_4").value);
+			let viidesluku = Number(document.getElementById("luku_5").value);
+			let kuudesluku = Number(document.getElementById("luku_6").value);
+			let seitsemasluku = Number(document.getElementById("luku_7").value);
+			
+			
+			
+			//laskutoimituksen tulos sijoitetaan summa-nimiseen muuttujaan
+			let summa = ekaluku + tokaluku + kolmasluku + neljasluku + viidesluku + kuudesluku + seitsemasluku;
+			
+			//tulostus
+			document.getElementById("tulostusAlue").innerHTML = summa;
+		}
+	</script>
+</body>
+</html>
+

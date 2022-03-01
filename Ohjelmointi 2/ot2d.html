@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Junalippu</title>
+    </head>
+    <body>
+	
+	<h2>Lippuautomaatti</h2>
+
+<br><br>
+2. luokka
+<input type="radio" name="laji" id="kaksiluokka" checked><br>
+1. luokka
+<input type="radio"  name="laji" id="yksiluokka">
+<br/><br/>
+
+Meno
+<input type="radio" name="laji2" id="Meno" checked><br>
+Meno-paluu
+<input type="radio"  name="laji2" id="Meno-paluu">
+<br/><br/>
+
+Alennus <input type="checkbox" id="alennus">
+<br/><br/>
+
+Lippuja:
+<select id="Lippuja">
+	<option value="1">1</option> 
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+</select>
+
+</br>
+
+<button onclick="osta()">Osta</button>
+<br/><br/>
+<div id="tulostusAlue"></div>
+	
+    <script>
+   
+   function osta() { //Funktio laskee lippujen ninnan
+   
+   var Lippuja = document.getElementById("Lippuja").value;	//Haetaan lippujen lukumäärä
+   
+   if(document.getElementById("kaksiluokka").checked) { //Tarkastetaan luokka
+		var laji = "2luokka ";
+		laji = 86.10;
+		if(document.getElementById("alennus").checked) {
+		var alennus = "alennus ";
+		alennus = 0.5; //Alennuskerroin
+	}
+	else { 
+		alennus = "Ei alennusta ";
+		alennus = 1; //Alennuskerroin, muutoin ohjelma herjasi NaN:nia
+	}
+	}
+   if(document.getElementById("yksiluokka").checked) { 
+		laji = "1luokka ";
+		laji = 140.61;
+		alennus = 1;
+	}	  
+    if(document.getElementById("Meno").checked) { 
+		var laji2 = "Meno ";
+		laji2 = 1;
+	}
+   if(document.getElementById("Meno-paluu").checked) { 
+		laji2 = "Meno-paluu ";
+		laji2 = 2; //Tämä myöskin hintakerroin
+	}	   	
+	
+    document.getElementById("tulostusAlue").innerHTML = Lippuja + "<br/>" + laji + "<br/>" +alennus;
+	document.getElementById("tulostusAlue").innerHTML = "Kokonaishinta" + " " + Lippuja * laji * laji2 * alennus + " " + "euroa.";
+    }
+	
+    </script>   
+    </body>
+</html>
