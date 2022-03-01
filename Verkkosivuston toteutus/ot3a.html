@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+{
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 20%;
+  padding: 12px;
+  border: 1px solid black;
+  resize: vertical;
+  background-color: #ffa500;
+  color: white;
+}
+
+label {
+  padding: 12px 2px 2px 0;
+  display: inline-block;
+}
+
+input[type=submit], input[type=reset] {
+  background-color: #0000ff;
+  color: white;
+  padding: 5px 30px;
+  border: 1px solid Grey;  
+}
+
+.container {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.tilaa {
+  float: left;
+  width: 8%;
+  margin-top: 0px;
+}
+
+.teksti {
+  float: left;
+  width: 75%;
+  margin-top: 0px;
+}
+
+.oikealle {
+  float: left;
+  width: 7%;
+  margin-left: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Vastauslomake</h2>
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="tilaa">
+      <label for="fname">Nimi:</label>
+    </div>
+    <div class="teksti">
+      <input type="text" id="nimi" name="kokonimi" placeholder="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="tilaa">
+      <label for="sposti">Sähköposti:</label>
+    </div>
+    <div class="teksti">
+      <input type="text" id="sposti" name="sposti" placeholder="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="tilaa">
+      <label for="vastaus">Vastaus:</label>
+    </div>
+    <div class="teksti">
+      <input type="text" id="vastaus" name="vastaus" placeholder="">
+    </div>
+  </div>
+  <p> </p>
+  <div class="row">
+  <div class="oikealle">
+  <label for="tyhjäätilaa">.</label>
+  </div>
+    <input type="submit" value="Lähetä">
+    <input type="reset" value="Tyhjennä">
+  </div>
+  </form>
+</div>
+
+</body>
+</html>

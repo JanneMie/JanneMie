@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+{
+  box-sizing: border-box;
+}
+
+p {
+text-align: center;
+}
+
+h2 {
+padding-top: 15px;
+color:MediumSeaGreen;
+text-align: center;
+text-transform: uppercase;
+font-size: 25px;
+}
+
+input[type=text], select, textarea {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-image: url("hakunappi.png");
+  background-repeat: no-repeat;
+  background-color: #adfab7;
+  padding: 15px 64px;
+  border: none;
+  margin-left: 200px;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #adfab7;
+  padding: 20px;
+}
+
+.wrapper {
+width: 580px;
+height: 475px;
+background-color: lightblue;
+padding 50px;
+margin: 20px;
+}
+
+.top {
+background-color: #adfab7;
+float: left;
+margin-right: 10px;
+margin-left: 10px;
+width: 560px;
+height: 100px;
+}
+
+.col1 {
+float:left;
+width:280px;
+height:200px;
+background-color: #adfab7;
+margin-left:10px;
+}
+
+.col2 {
+float:left;
+width:280px;
+height:200px;
+background-color: #adfab7;
+margin-right:10px;
+}
+
+.bottom {
+background-color: #adfab7;
+background-image: url("taustakuva.jpg");
+background-repeat: no-repeat;
+float: left;
+margin-right: 10px;
+margin-left: 10px;
+width: 560px;
+height: 100px;
+}
+
+.col-25 {
+  float: left;
+  width: 45%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 55%;
+  margin-top: 6px;
+}
+
+.col-15 {
+  float: left;
+  width: 22.5%;
+  margin-top: 6px;
+}
+
+.col-85 {
+  float: left;
+  width: 77.5%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+	<div id="header">
+	<h2>Myytävät ja vuokrattavat asunnot</br>
+	</h2>
+	</div>
+	
+	<div id="content">
+		<div id="col1">
+		</div>
+		<div id="col2">
+		</div>
+	</div>
+	
+	<div class="top">
+	<p>Esim. postinumero tai kunta</p>
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-15">
+      <label for="alue">Alue</label>
+    </div>
+    <div class="col-85">
+      <input type="text" id="alue" name="alue" placeholder="">
+    </div>
+  </div>
+  </div>
+  
+  <div class="col1">
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Asuntotyyppi</label>
+    </div>
+    <div class="col-75">
+      <select id="asunto" name="asunto">
+        <option value="kerrostalo">Kerrostalo</option>
+        <option value="rivitalo">Rivitalo</option>
+        <option value="omakotitalo">Omakotitalo</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Lämmitysmuoto</label>
+    </div>
+    <div class="col-75">
+      <select id="lämmitys" name="lämmitys">
+        <option value="kaukolämpö">Kaukolämpö</option>
+        <option value="maalämpö">Maalämpö</option>
+        <option value="sähkö">Sähkö</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Huoneluku</label>
+    </div>
+    <div class="col-75">
+      <select id="huone" name="huone">
+        <option value="yksi">1</option>
+        <option value="kaksi">2</option>
+        <option value="kolme">3</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Neliöitä</label>
+    </div>
+    <div class="col-75">
+      <select id="koko" name="koko">
+        <option value="pieni">alle 30</option>
+        <option value="keski">30-60</option>
+        <option value="suuri">yli 60</option>
+      </select>
+    </div>
+  </div>
+  </div>
+  
+  <div class="col2">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="alue">Minimihinta</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="alue" name="alue" placeholder="">
+    </div>
+  </div>
+  
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="alue">Maksimihinta</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="alue" name="alue" placeholder="">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Asunnon kunto</label>
+    </div>
+    <div class="col-75">
+      <select id="koko" name="koko">
+        <option value="pieni">Huono</option>
+        <option value="keski">Kohtalainen</option>
+        <option value="suuri">Hyvä</option>
+      </select>
+    </div>
+  </div>
+  
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="alue">m2</label>
+    </div>
+    <div class="col-75">
+      <input type="radio" name="omistus" value="Omistus"> Omistus <br>
+	  <input type="radio" name="omistus" value="Vuokra"> Vuokra <br><br>
+    </div>
+  </div>
+  </div>
+  
+  <div class="bottom">
+ 
+  <div class="row">
+    <input type="submit" value="">
+  </div>
+  </form>
+
+  </div>
+  </div>
+</body>
+</html>

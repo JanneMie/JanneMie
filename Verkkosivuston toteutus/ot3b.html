@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+{
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: grey;
+  color: black;
+  padding: 12px 20px;
+  border: 1px solid grey;
+  float: left;
+  margin-top: 6px;
+}
+
+input[type=checkbox] {
+margin-top: 10px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+fieldset{
+	margin:auto;
+	border:3px solid #ff9900;
+	background-color: #cccc99;
+	width: 80%;
+	float: left;
+	margin-top: 6px;
+	
+}
+
+legend{
+	color:#fff;
+	margin-left:2px;
+	background-color: #ff9900;
+    border: 3px solid #ff9900;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Tiedonkeruulomake</h2>
+
+<div class="container">
+  <form action="/action_page.php">
+  <fieldset id="fieldset">
+			<legend><strong>Lorem ipsum:</strong></legend>
+  <div class="row">
+    <div class="col-25">
+      <label for="fname"><strong>Lorem:</strong></label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lorem" name="lorem" placeholder="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname"><strong>Ipsum:</strong></label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="ipsum" name="ipsum" placeholder="">
+    </div>
+  </div>
+  </div>
+  <p> </p>
+  <div class="container">
+  <fieldset id="fieldset">
+			<legend><strong>Praesent vitae:</strong></legend>
+<input type="checkbox" name="check1" value="tellus">Pellentesque fermentum tellus
+<br>
+<input type="checkbox" name="check2" value="tellus">Maecenas at tellus
+<br>
+<input type="checkbox" name="check3" value="curabitur">Curabitur tincidunt nisl eget
+<br>
+<input type="checkbox" name="check4" value="curabitur">Curabitur quis orci vitae velit facilisis
+<br>
+<input type="checkbox" name="check5" value="litora">Cless aptent taciti sociosqu ad litora
+<br><br><br><br><br>
+</div>
+<p> </p>
+<div class="container">
+<fieldset id="fieldset">
+			<legend><strong>Fusce odio:</strong></legend>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject"></label>
+    </div>
+      <textarea id="textfield" name="textfield" placeholder="" style="height:200px"></textarea>
+    </div>
+  </div>
+  </div>
+  <p> </p>
+  <div class="row">
+  <div class="col-25">
+    <input type="submit" value="Submit">
+  </div>
+  </div>
+</form>
+
+</body>
+</html>
